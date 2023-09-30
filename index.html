@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <button onclick="showLoginDialog()">Login</button>
+
+    <script>
+        function showLoginDialog() {
+            const username = prompt("Enter your username:");
+            const password = prompt("Enter your password:");
+
+            // You can handle the username and password here.
+            if (username && password) {
+                // For demonstration purposes, let's just display them.
+                alert(`Username: ${username}\nPassword: ${password}`);
+            } else {
+                alert("Login canceled.");
+            }
+        }
+    </script>
+</body>
+</html>
