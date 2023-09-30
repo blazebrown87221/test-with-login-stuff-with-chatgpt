@@ -25,8 +25,9 @@
             try {
                 if (username === "blaze" && password === "Bl@aze05144") {
                     alert("Login successful!");
-                    // Redirect to a different page upon successful login.
-                    window.location.href = "DaSHbOrd.html";
+
+                    // Redirect to the dashboard page with "loggedIn=true" parameter.
+                    window.location.href = "dashboard.html?loggedIn=true";
                 } else {
                     alert("Login failed. Please check your credentials.");
                 }
