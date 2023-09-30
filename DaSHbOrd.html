@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Simple Dashboard</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -17,8 +17,28 @@
         </ul>
     </nav>
     <div class="container">
-        <h2>dashboard</h2>
+        <h2>Welcome to your dashboard!</h2>
         <p>This is a simple dashboard layout.</p>
+
+        <script>
+            // Function to parse URL parameters
+            function getUrlParameter(name) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            }
+
+            // Check if the "loggedIn" parameter is present in the URL
+            const loggedIn = getUrlParameter("loggedIn");
+
+            // If loggedIn is "true", the user is logged in, otherwise, they are not.
+            if (loggedIn === "true") {
+                // User is logged in, you can display content for logged-in users here.
+            } else {
+                // User is not logged in, you can display a message or redirect them to the login page.
+                alert("You are not logged in. Please log in to access this dashboard.");
+                // You can redirect them to the login page using window.location.href.
+            }
+        </script>
     </div>
 </body>
 </html>
