@@ -21,11 +21,12 @@
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
-            // Simulate server-side encryption and authentication (replace with real server-side code).
+            // Simulate server-side authentication (replace with real server-side code).
             try {
                 if (username === "blaze" && password === "Bl@aze05144") {
                     alert("Login successful!");
-                    // You can redirect or perform further actions here.
+                    // Redirect to a different page upon successful login.
+                    window.location.href = "dashboard.html";
                 } else {
                     alert("Login failed. Please check your credentials.");
                 }
