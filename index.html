@@ -3,48 +3,7 @@
 <head>
     <title>Login Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            color: #333;
-        }
-
-        button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        input[type="text"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
+        /* ... (CSS styles as in previous examples) */
     </style>
 </head>
 <body>
@@ -53,21 +12,25 @@
         <form>
             <input type="text" placeholder="Username" id="username">
             <input type="password" placeholder="Password" id="password">
-            <button type="button" onclick="showLoginDialog()">Login</button>
+            <button type="button" onclick="login()">Login</button>
         </form>
     </div>
 
     <script>
-        function showLoginDialog() {
+        function login() {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
-            // You can handle the username and password here.
-            if (username && password) {
-                // For demonstration purposes, let's just display them.
-                alert(`Username: ${username}\nPassword: ${password}`);
-            } else {
-                alert("Please enter both username and password.");
+            // Simulate server-side encryption and authentication (replace with real server-side code).
+            try {
+                if (username === "blaze" && password === "Bl@aze05144") {
+                    alert("Login successful!");
+                    // You can redirect or perform further actions here.
+                } else {
+                    alert("Login failed. Please check your credentials.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
             }
         }
     </script>
