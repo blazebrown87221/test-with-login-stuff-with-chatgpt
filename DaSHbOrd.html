@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Simple Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -11,7 +61,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="dashboard.html">Home</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="Settings.html">Settings</a></li>
         </ul>
@@ -19,26 +69,6 @@
     <div class="container">
         <h2>Welcome to your dashboard!</h2>
         <p>This is a simple dashboard layout.</p>
-
-        <script>
-            // Function to parse URL parameters
-            function getUrlParameter(name) {
-                const urlParams = new URLSearchParams(window.location.search);
-                return urlParams.get(name);
-            }
-
-            // Check if the "loggedIn" parameter is present in the URL
-            const loggedIn = getUrlParameter("loggedIn");
-
-            // If loggedIn is "true", the user is logged in, otherwise, they are not.
-            if (loggedIn === "true") {
-                // User is logged in, you can display content for logged-in users here.
-            } else {
-                // User is not logged in, you can display a message or redirect them to the login page.
-                alert("You are not logged in. Please log in to access this dashboard.");
-                // You can redirect them to the login page using window.location.href.
-            }
-        </script>
     </div>
 </body>
 </html>
